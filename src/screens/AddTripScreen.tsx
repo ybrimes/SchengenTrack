@@ -19,6 +19,7 @@ import { isTripCompliant } from '../utils/schengenCalculator';
 import { SchengenCountry, Trip } from '../types';
 import { spacing, fontSize, borderRadius } from '../constants/theme';
 import { FREE_TRIP_LIMIT } from '../constants/subscription';
+import { hapticSuccess, hapticError } from '../utils/haptics';
 
 type RouteParams = {
   AddTrip: { editTripId?: string };
@@ -120,6 +121,7 @@ export function AddTripScreen() {
     } else {
       await addTrip(tripData);
     }
+    hapticSuccess();
     navigation.goBack();
   }
 
@@ -132,6 +134,7 @@ export function AddTripScreen() {
         style: 'destructive',
         onPress: async () => {
           await deleteTrip(editTripId);
+          hapticSuccess();
           navigation.goBack();
         },
       },

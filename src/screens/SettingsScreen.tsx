@@ -23,6 +23,7 @@ import { getTripDuration } from '../utils/schengenCalculator';
 import { requestPermissions } from '../utils/notifications';
 import { SCHENGEN_COUNTRIES } from '../constants/countries';
 import { spacing, fontSize, borderRadius } from '../constants/theme';
+import { hapticWarning, hapticSuccess } from '../utils/haptics';
 
 export function SettingsScreen() {
   const theme = useTheme();
@@ -37,6 +38,7 @@ export function SettingsScreen() {
   }
 
   function handleResetAll() {
+    hapticWarning();
     Alert.alert(
       'Reset All Data',
       'This will permanently delete all your trips and reset all settings. This cannot be undone.',
@@ -48,6 +50,7 @@ export function SettingsScreen() {
           onPress: async () => {
             await clearAllTrips();
             await resetSettings();
+            hapticSuccess();
           },
         },
       ]

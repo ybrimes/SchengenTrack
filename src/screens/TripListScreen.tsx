@@ -25,6 +25,7 @@ import { Trip } from '../types';
 import { spacing, fontSize, borderRadius } from '../constants/theme';
 import { format } from 'date-fns';
 import { FREE_TRIP_LIMIT } from '../constants/subscription';
+import { hapticSuccess, hapticWarning } from '../utils/haptics';
 
 type FilterType = 'all' | 'past' | 'planned';
 
@@ -93,13 +94,17 @@ export function TripListScreen() {
   }, [trips]);
 
   function handleDelete(trip: Trip) {
+    hapticWarning();
     const label = trip.name || trip.country || 'this trip';
     Alert.alert('Delete Trip', `Are you sure you want to delete ${label}?`, [
       { text: 'Cancel', style: 'cancel' },
       {
         text: 'Delete',
         style: 'destructive',
-        onPress: () => deleteTrip(trip.id),
+        onPress: () => {
+          deleteTrip(trip.id);
+          hapticSuccess();
+        },
       },
     ]);
   }

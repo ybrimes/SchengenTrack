@@ -27,6 +27,7 @@ import {
 } from '../utils/schengenCalculator';
 import { Trip } from '../types';
 import { spacing, fontSize, borderRadius } from '../constants/theme';
+import { hapticSuccess } from '../utils/haptics';
 import { format, addDays, differenceInDays } from 'date-fns';
 import { DatePickerField } from '../components/DatePickerField';
 
@@ -173,6 +174,7 @@ export function CalendarScreen() {
       exitDate: newExitDate!,
       isPlanned: newIsPlanned,
     });
+    hapticSuccess();
     setAddMode(false);
     setNewExitDate(null);
     setNewTripName('');
