@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(npx create-expo-app@latest:*)",
+      "Bash(npx --yes create-expo-app@latest:*)",
+      "Bash(npx jest:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx expo start:*)",
+      "Bash(start:*)",
+      "Bash(npx expo install react-dom react-native-web @expo/metro-runtime)",
+      "Bash(grep:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
