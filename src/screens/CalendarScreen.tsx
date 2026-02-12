@@ -9,9 +9,10 @@ import {
   TextInput,
   Alert,
   Switch,
+  AppState,
 } from 'react-native';
 import { Calendar, DateData } from 'react-native-calendars';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTripStore } from '../store/tripStore';
 import { useTheme } from '../hooks/useTheme';
@@ -43,12 +44,29 @@ export function CalendarScreen() {
   const [newTripName, setNewTripName] = useState('');
   const [newIsPlanned, setNewIsPlanned] = useState(false);
 
-  const todayStr = useMemo(() => {
+  const [todayStr, setTodayStr] = useState(() => {
     const now = new Date();
     return formatDate(
       new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()))
     );
-  }, []);
+  });
+
+  useFocusEffect(
+    useCallback(() => {
+      const refresh = () => {
+        const now = new Date();
+        const fresh = formatDate(
+          new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()))
+        );
+        setTodayStr((prev) => (prev !== fresh ? fresh : prev));
+      };
+      refresh();
+      const sub = AppState.addEventListener('change', (state) => {
+        if (state === 'active') refresh();
+      });
+      return () => sub.remove();
+    }, [])
+  );
 
   const markedDates = useMemo(() => {
     const marks: Record<string, any> = {};

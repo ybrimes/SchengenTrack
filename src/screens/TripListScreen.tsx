@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -6,8 +6,9 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
+  AppState,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTripStore } from '../store/tripStore';
 import { useTheme } from '../hooks/useTheme';
@@ -35,12 +36,29 @@ export function TripListScreen() {
   const { canViewStats, canAddTrip, isPremium, tripsRemaining } = usePremiumGate();
   const [filter, setFilter] = useState<FilterType>('all');
 
-  const todayStr = useMemo(() => {
+  const [todayStr, setTodayStr] = useState(() => {
     const now = new Date();
     return formatDate(
       new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()))
     );
-  }, []);
+  });
+
+  useFocusEffect(
+    useCallback(() => {
+      const refresh = () => {
+        const now = new Date();
+        const fresh = formatDate(
+          new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()))
+        );
+        setTodayStr((prev) => (prev !== fresh ? fresh : prev));
+      };
+      refresh();
+      const sub = AppState.addEventListener('change', (state) => {
+        if (state === 'active') refresh();
+      });
+      return () => sub.remove();
+    }, [])
+  );
 
   const filteredTrips = useMemo(() => {
     let list = [...trips];

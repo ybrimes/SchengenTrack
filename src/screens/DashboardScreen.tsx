@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
@@ -6,8 +6,9 @@ import {
   ScrollView,
   TouchableOpacity,
   useWindowDimensions,
+  AppState,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTripStore } from '../store/tripStore';
 import { useTheme } from '../hooks/useTheme';
@@ -35,11 +36,27 @@ export function DashboardScreen() {
   const { isPremium, tripsRemaining, canAddTrip } = usePremiumGate();
   const { width } = useWindowDimensions();
 
-  const todayDate = useMemo(() => {
+  const [todayDate, setTodayDate] = useState(() => {
     const now = new Date();
     return new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-  }, []);
+  });
   const todayStr = formatDate(todayDate);
+
+  // Refresh today's date when screen gets focus or app returns from background
+  useFocusEffect(
+    useCallback(() => {
+      const refresh = () => {
+        const now = new Date();
+        const fresh = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+        setTodayDate((prev) => (formatDate(prev) !== formatDate(fresh) ? fresh : prev));
+      };
+      refresh();
+      const sub = AppState.addEventListener('change', (state) => {
+        if (state === 'active') refresh();
+      });
+      return () => sub.remove();
+    }, [])
+  );
 
   const [perspectiveDate, setPerspectiveDate] = useState<string | null>(null);
   const isViewingFuture = perspectiveDate !== null && perspectiveDate !== todayStr;

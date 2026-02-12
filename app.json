@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.schengentrack.app"
+      "bundleIdentifier": "com.schengentrack.app",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This app does not track you. This permission is required by third-party payment processing."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -34,7 +37,13 @@
         {
           "color": "#1a5276"
         }
-      ]
-    ]
+      ],
+      "react-native-purchases"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    }
   }
 }
