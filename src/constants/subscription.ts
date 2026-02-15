@@ -1,8 +1,7 @@
 export const FREE_TRIP_LIMIT = 3;
 
-// Replace with your actual RevenueCat API keys
-export const REVENUECAT_API_KEY_APPLE = 'appl_YOUR_REVENUECAT_API_KEY';
-export const REVENUECAT_API_KEY_GOOGLE = 'goog_YOUR_REVENUECAT_API_KEY';
+export const REVENUECAT_API_KEY_APPLE = 'test_yJtWtZGUPHKiVURgNHDrvJYXfFs';
+export const REVENUECAT_API_KEY_GOOGLE = 'test_yJtWtZGUPHKiVURgNHDrvJYXfFs';
 
 export const ENTITLEMENT_ID = 'pro';
 export const OFFERING_ID = 'default';

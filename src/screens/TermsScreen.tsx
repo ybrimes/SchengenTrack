@@ -122,7 +122,7 @@ export function TermsScreen() {
       </Text>
       <Text style={[styles.body, { color: theme.textSecondary }]}>
         If you have questions about these Terms, please contact us at
-        support@schengentrack.app.
+        yannick.huber@tutamail.com.
       </Text>
     </ScrollView>
   );

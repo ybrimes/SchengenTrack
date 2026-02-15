@@ -101,7 +101,7 @@ export function PrivacyPolicyScreen() {
       </Text>
       <Text style={[styles.body, { color: theme.textSecondary }]}>
         If you have questions about this Privacy Policy, please contact us at
-        support@schengentrack.app.
+        yannick.huber@tutamail.com.
       </Text>
     </ScrollView>
   );
