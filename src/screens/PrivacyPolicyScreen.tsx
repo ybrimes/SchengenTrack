@@ -16,7 +16,7 @@ export function PrivacyPolicyScreen() {
       </Text>
 
       <Text style={[styles.body, { color: theme.textSecondary }]}>
-        SchengenTrack ("the App") is committed to protecting your privacy. This
+        Schengenigan ("the App") is committed to protecting your privacy. This
         Privacy Policy explains how the App handles your information.
       </Text>
 

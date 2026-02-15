@@ -22,7 +22,7 @@ interface Step {
 
 const STEPS: Step[] = [
   {
-    title: 'Welcome to SchengenTrack',
+    title: 'Welcome to Schengenigan',
     body: 'Track your Schengen Area travel days and stay compliant with the 90/180-day rule.',
     icon: 'shield-checkmark-outline',
   },

@@ -1,7 +1,7 @@
-# SchengenTrack — App Store Listing
+# Schengenigan — App Store Listing
 
 ## App Name
-SchengenTrack
+Schengenigan
 
 ## Subtitle (Apple: 30 chars max)
 90/180-Day Travel Tracker
@@ -11,10 +11,10 @@ Track your Schengen Area travel days and stay within the 90/180-day rule.
 
 ## Full Description
 
-Keep track of your Schengen Area travel days with ease. SchengenTrack helps UK citizens and other third-country nationals monitor the 90/180-day rule so you never overstay.
+Keep track of your Schengen Area travel days with ease. Schengenigan helps UK citizens and other third-country nationals monitor the 90/180-day rule so you never overstay.
 
 HOW IT WORKS
-The Schengen Area allows visa-free stays of up to 90 days within any rolling 180-day period. Both your entry and exit days count. SchengenTrack calculates your remaining allowance automatically as you log trips.
+The Schengen Area allows visa-free stays of up to 90 days within any rolling 180-day period. Both your entry and exit days count. Schengenigan calculates your remaining allowance automatically as you log trips.
 
 FEATURES
 - Dashboard with real-time day counter and progress ring
@@ -26,7 +26,7 @@ FEATURES
 - Comprehensive FAQ and rule explanation
 - All data stored locally on your device — nothing leaves your phone
 
-SCHENGENTRACK PRO
+SCHENGENIGAN PRO
 Unlock the full experience:
 - Unlimited trips (free tier: 3 trips)
 - Trip simulator — plan ahead with "what if" scenarios
@@ -36,7 +36,7 @@ Unlock the full experience:
 - Trip statistics
 
 PRIVACY FIRST
-SchengenTrack stores all data locally on your device. No accounts, no tracking, no analytics, no data collection. Your travel history stays yours.
+Schengenigan stores all data locally on your device. No accounts, no tracking, no analytics, no data collection. Your travel history stays yours.
 
 IMPORTANT DISCLAIMER
 This app provides guidance only and does not constitute legal or immigration advice. Always verify your travel eligibility with official sources before travelling. The developer is not liable for any consequences arising from use of this app.
@@ -55,8 +55,8 @@ Secondary: Utilities
 Free (with in-app purchases)
 
 ## In-App Purchases
-- SchengenTrack Pro Monthly — £2.99/month
-- SchengenTrack Pro Annual — £7.99/year
+- Schengenigan Pro Monthly — £2.99/month
+- Schengenigan Pro Annual — £7.99/year
 
 ## What's New (v1.0.0)
 Initial release.
@@ -65,7 +65,7 @@ Initial release.
 mailto:yannick.huber@tutamail.com
 
 ## Privacy Policy URL
-https://ybrimes.github.io/SchengenTrack/privacy.html
+https://ybrimes.github.io/Schengenigan/privacy.html
 
 ## Terms of Service URL
-https://ybrimes.github.io/SchengenTrack/terms.html
+https://ybrimes.github.io/Schengenigan/terms.html

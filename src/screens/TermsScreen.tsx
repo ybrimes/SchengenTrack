@@ -16,7 +16,7 @@ export function TermsScreen() {
       </Text>
 
       <Text style={[styles.body, { color: theme.textSecondary }]}>
-        By using SchengenTrack ("the App"), you agree to these Terms of
+        By using Schengenigan ("the App"), you agree to these Terms of
         Service. If you do not agree, please do not use the App.
       </Text>
 
@@ -66,7 +66,7 @@ export function TermsScreen() {
         Subscriptions
       </Text>
       <Text style={[styles.body, { color: theme.textSecondary }]}>
-        The App offers optional premium subscriptions ("SchengenTrack Pro")
+        The App offers optional premium subscriptions ("Schengenigan Pro")
         billed monthly or annually. Subscriptions are processed and managed by
         Apple App Store or Google Play Store. Payment is charged to your store
         account at confirmation of purchase. Subscriptions automatically renew

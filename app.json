@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SchengenTrack",
-    "slug": "SchengenTrack",
+    "name": "Schengenigan",
+    "slug": "Schengenigan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.schengentrack.app",
+      "bundleIdentifier": "com.schengenigan.app",
       "infoPlist": {
         "NSUserTrackingUsageDescription": "This app does not track you. This permission is required by third-party payment processing."
       }
@@ -25,7 +25,7 @@
         "backgroundColor": "#1a5276"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.schengentrack.app",
+      "package": "com.schengenigan.app",
       "permissions": ["NOTIFICATIONS"]
     },
     "web": {
@@ -37,8 +37,7 @@
         {
           "color": "#1a5276"
         }
-      ],
-      "react-native-purchases"
+      ]
     ],
     "extra": {
       "eas": {

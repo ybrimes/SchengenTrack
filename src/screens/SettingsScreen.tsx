@@ -82,7 +82,7 @@ export function SettingsScreen() {
     try {
       await Share.share({
         message: csv,
-        title: 'SchengenTrack Trip Export',
+        title: 'Schengenigan Trip Export',
       });
     } catch {
       Alert.alert('Export Failed', 'Could not export trip data.');
@@ -122,7 +122,7 @@ export function SettingsScreen() {
               Current Plan
             </Text>
             <Text style={[styles.settingDesc, { color: theme.textSecondary }]}>
-              {isPremium ? 'SchengenTrack Pro' : 'Free'}
+              {isPremium ? 'Schengenigan Pro' : 'Free'}
             </Text>
           </View>
           {isPremium ? (
@@ -295,7 +295,7 @@ export function SettingsScreen() {
       </Text>
       <View style={[styles.card, { backgroundColor: theme.surface }]}>
         <Text style={[styles.aboutText, { color: theme.textSecondary }]}>
-          SchengenTrack v1.0.0
+          Schengenigan v1.0.0
         </Text>
         <Text style={[styles.aboutText, { color: theme.textSecondary }]}>
           All data is stored locally on your device. No data is collected or

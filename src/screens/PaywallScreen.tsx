@@ -69,7 +69,7 @@ export function PaywallScreen() {
             <Ionicons name="shield-checkmark" size={40} color={theme.accent} />
           </View>
           <Text style={[styles.title, { color: theme.text }]}>
-            SchengenTrack Pro
+            Schengenigan Pro
           </Text>
           <Text style={[styles.subtitle, { color: theme.textSecondary }]}>
             Unlock the full experience

@@ -299,7 +299,7 @@ export function SimulatorScreen() {
               Pro Feature
             </Text>
             <Text style={[styles.overlayText, { color: theme.textSecondary }]}>
-              The What If? Planner is available with SchengenTrack Pro. Simulate trips and plan ahead.
+              The What If? Planner is available with Schengenigan Pro. Simulate trips and plan ahead.
             </Text>
             <TouchableOpacity
               style={[styles.overlayBtn, { backgroundColor: theme.accent }]}
