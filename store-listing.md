@@ -65,4 +65,7 @@ Initial release.
 mailto:yannick.huber@tutamail.com
 
 ## Privacy Policy URL
-(Host the content from PrivacyPolicyScreen on a web page and link here)
+https://ybrimes.github.io/SchengenTrack/privacy.html
+
+## Terms of Service URL
+https://ybrimes.github.io/SchengenTrack/terms.html
